@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<meta name="theme-color" content="#FBF7EE">
+<title>Penthouse con Amor — Auditoría Estratégica Mundial 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  /* === FORZAR LIGHT MODE - evitar inversión automática del navegador === */
+  :root {
+    color-scheme: light only;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: light only;
+    }
+  }
+
+  :root {
+    --gold: #B8952E;
+    --gold-deep: #8C6E1F;
+    --gold-soft: #D4B860;
+    --gold-pale: #F4ECD3;
+    --cream: #FBF7EE;
+    --cream-deep: #F2E9D4;
+    --ink: #1F1A0E;
+    --ink-soft: #4A4128;
+    --white: #FFFFFF;
+    --shadow-soft: 0 1px 3px rgba(184, 149, 46, 0.08), 0 4px 24px rgba(42, 36, 24, 0.06);
+    --shadow-card: 0 2px 8px rgba(184, 149, 46, 0.10), 0 12px 40px rgba(42, 36, 24, 0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+    background: #FBF7EE !important;
+    color: #1F1A0E !important;
+  }
+
+  body {
+    background: #FBF7EE !important;
+    color: #1F1A0E !important;
+    font-family: 'Manrope', -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(at 20% 10%, rgba(212, 184, 96, 0.06) 0px, transparent 50%),
+      radial-gradient(at 80% 80%, rgba(184, 149, 46, 0.04) 0px, transparent 50%);
+    -webkit-text-size-adjust: 100%;
+    forced-color-adjust: none;
+  }
+
+  /* ===== TIPOGRAFÍA ===== */
+  h1, h2, h3, h4, .display {
+    font-family: 'Cormorant Garamond', serif;
+    color: #1F1A0E !important;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  p, li, td, th, div, span, a {
+    color: inherit;
+  }
+
+  .handwritten {
+    font-family: 'Caveat', cursive;
+    color: #8C6E1F !important;
+  }
+
+  /* ===== LAYOUT ===== */
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ===== HERO / PORTADA ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 28px;
+    position: relative;
+    background:
+      linear-gradient(180deg, var(--cream) 0%, var(--cream-deep) 100%);
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      radial-gradient(circle at 30% 20%, rgba(184, 149, 46, 0.12), transparent 40%),
+      radial-gradient(circle at 70% 80%, rgba(212, 184, 96, 0.10), transparent 40%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 1.2s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .brand-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--gold);
+    border-radius: 100px;
+  }
+
+  .brand-mark svg { width: 22px; height: 22px; }
+
+  .brand-mark span {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--gold-deep);
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 8vw, 5.2rem);
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1.05;
+    color: #1F1A0E !important;
+  }
+
+  .hero h1 .accent {
+    color: #B8952E !important;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .hero .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #4A4128 !important;
+    margin-bottom: 48px;
+    font-weight: 400;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--gold-soft);
+  }
+
+  .meta-item {
+    text-align: center;
+  }
+
+  .meta-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .meta-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: #1F1A0E !important;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Caveat', cursive;
+    color: var(--gold-deep);
+    font-size: 1.2rem;
+    opacity: 0.7;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 8px); }
+  }
+
+  /* ===== CARTA PERSONAL ===== */
+  .letter {
+    background: var(--white);
+    margin: 80px auto;
+    max-width: 760px;
+    padding: 64px 56px;
+    border-radius: 4px;
+    box-shadow: var(--shadow-card);
+    position: relative;
+    border-top: 4px solid var(--gold);
+  }
+
+  .letter::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: var(--gold-soft);
+  }
+
+  .letter h2 {
+    font-size: 2.4rem;
+    font-style: italic;
+    color: var(--gold-deep);
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .letter .salute {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .letter p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    margin-bottom: 18px;
+    color: #1F1A0E !important;
+  }
+
+  .letter .signature {
+    text-align: right;
+    margin-top: 32px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.6rem;
+    color: var(--gold-deep);
+  }
+
+  /* ===== VERSÍCULO BÍBLICO ===== */
+  .verse {
+    margin: 28px auto;
+    padding: 24px 28px;
+    max-width: 90%;
+    text-align: center;
+    background: linear-gradient(180deg, var(--gold-pale) 0%, var(--cream) 100%);
+    border-top: 1px solid var(--gold-soft);
+    border-bottom: 1px solid var(--gold-soft);
+    position: relative;
+  }
+
+  .verse::before, .verse::after {
+    content: '✦';
+    color: var(--gold);
+    font-size: 0.9rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .verse::before { left: 12px; }
+  .verse::after { right: 12px; }
+
+  .verse-text {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-style: italic !important;
+    font-size: 1.25rem !important;
+    color: #1F1A0E !important;
+    line-height: 1.5 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .verse-ref {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    color: #8C6E1F !important;
+    font-weight: 600 !important;
+    margin-bottom: 0 !important;
+    font-style: normal !important;
+  }
+
+  /* ===== SECCIÓN ===== */
+  section.chapter {
+    padding: 80px 0 40px;
+  }
+
+  .chapter-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .chapter-num::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .chapter h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 16px;
+    font-weight: 500;
+    color: #1F1A0E !important;
+  }
+
+  .chapter h2 .gold { color: #B8952E !important; font-style: italic; }
+
+  .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #4A4128 !important;
+    font-style: italic;
+    margin-bottom: 40px;
+    max-width: 680px;
+    border-left: 3px solid var(--gold);
+    padding-left: 24px;
+  }
+
+  .chapter h3 {
+    font-size: 1.7rem;
+    margin: 48px 0 16px;
+    color: #1F1A0E !important;
+    font-weight: 500;
+  }
+
+  .chapter h3 .num {
+    color: #B8952E !important;
+    font-style: italic;
+    margin-right: 8px;
+  }
+
+  .chapter h4 {
+    font-size: 1.3rem;
+    margin: 32px 0 12px;
+    color: #8C6E1F !important;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  .chapter p {
+    margin-bottom: 18px;
+    max-width: 720px;
+    color: #1F1A0E;
+  }
+
+  .chapter li {
+    color: #1F1A0E;
+  }
+
+  .chapter strong {
+    color: #1F1A0E !important;
+    font-weight: 600;
+  }
+
+  .chapter em {
+    color: #8C6E1F !important;
+    font-style: italic;
+  }
+
+  .chapter ul, .chapter ol {
+    margin: 16px 0 24px 0;
+    padding-left: 0;
+    list-style: none;
+    max-width: 720px;
+  }
+
+  .chapter ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    line-height: 1.65;
+  }
+
+  .chapter ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--gold);
+    font-size: 0.9rem;
+  }
+
+  .chapter ol {
+    counter-reset: olcount;
+  }
+
+  .chapter ol li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 14px;
+    counter-increment: olcount;
+    line-height: 1.65;
+  }
+
+  .chapter ol li::before {
+    content: counter(olcount, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  /* ===== BLOQUE DESTACADO / ALERTA ===== */
+  .callout {
+    background: linear-gradient(135deg, var(--gold-pale) 0%, var(--cream) 100%);
+    border-left: 4px solid var(--gold);
+    padding: 28px 32px;
+    margin: 32px 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .callout.urgent {
+    background: linear-gradient(135deg, #FBE9E9 0%, var(--cream) 100%);
+    border-left-color: #C44545;
+  }
+
+  .callout-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .callout.urgent .callout-label {
+    color: #C44545;
+  }
+
+  .callout p {
+    margin-bottom: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.65;
+    font-style: italic;
+    color: #1F1A0E !important;
+  }
+
+  /* ===== QUOTE PERSONAL ===== */
+  .personal-note {
+    background: var(--white);
+    border: 1px dashed var(--gold);
+    padding: 24px 28px;
+    margin: 32px 0;
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .personal-note::before {
+    content: '✶';
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: var(--cream);
+    padding: 0 8px;
+    color: var(--gold);
+    font-size: 1.2rem;
+  }
+
+  .personal-note .nota-label {
+    font-family: 'Caveat', cursive;
+    color: var(--gold-deep);
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+
+  .personal-note p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #1F1A0E !important;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ===== TABLAS ===== */
+  .table-wrap {
+    margin: 24px 0 32px;
+    overflow-x: auto;
+    border-radius: 6px;
+    box-shadow: var(--shadow-soft);
+    background: var(--white);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.95rem;
+  }
+
+  thead {
+    background: var(--gold);
+    color: var(--white);
+  }
+
+  thead th {
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--gold-pale);
+    color: #1F1A0E !important;
+    background: #FFFFFF;
+  }
+
+  tbody tr:hover {
+    background: var(--gold-pale);
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  tbody td strong {
+    color: var(--gold-deep);
+  }
+
+  .table-wrap em {
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+
+  /* ===== EJEMPLOS DE TÍTULO ===== */
+  .title-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px 0;
+  }
+
+  .title-example {
+    padding: 16px 20px;
+    background: var(--white);
+    border: 1px solid var(--gold-soft);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .title-example:hover {
+    border-color: var(--gold);
+    transform: translateX(4px);
+  }
+
+  .title-example .text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    color: #1F1A0E !important;
+    font-weight: 500;
+  }
+
+  .title-example .meta {
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-style: italic;
+    white-space: nowrap;
+  }
+
+  /* ===== BLOQUE DESCRIPCIÓN PROPUESTA ===== */
+  .listing-mock {
+    background: var(--white);
+    padding: 32px;
+    margin: 24px 0;
+    border-radius: 8px;
+    border: 1px solid var(--gold-soft);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .listing-mock h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--gold-deep);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .listing-mock p, .listing-mock .item {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: #1F1A0E !important;
+  }
+
+  .listing-mock .item::before {
+    content: '✦ ';
+    color: var(--gold);
+  }
+
+  .listing-mock .closing {
+    margin-top: 16px;
+    font-style: italic;
+    color: var(--gold-deep);
+    text-align: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--gold-pale);
+  }
+
+  /* ===== CHECKLIST ===== */
+  .checklist {
+    background: var(--white);
+    padding: 28px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: var(--shadow-soft);
+    border-left: 3px solid var(--gold);
+  }
+
+  .checklist h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gold-pale);
+  }
+
+  .checklist-item:last-child { border-bottom: none; }
+
+  .checkbox {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--gold);
+    border-radius: 3px;
+    margin-top: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+
+  .checkbox.checked {
+    background: var(--gold);
+  }
+
+  .checkbox.checked::after {
+    content: '✓';
+    color: var(--white);
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .checklist-item .text {
+    flex: 1;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: #1F1A0E !important;
+  }
+
+  /* ===== KPI / NÚMEROS DESTACADOS ===== */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .kpi {
+    background: var(--white);
+    padding: 24px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    border-top: 3px solid var(--gold);
+    transition: transform 0.3s ease;
+  }
+
+  .kpi:hover {
+    transform: translateY(-4px);
+  }
+
+  .kpi-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .kpi-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+
+  /* ===== DIVISOR ORNAMENTAL ===== */
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 60px 0;
+    color: var(--gold);
+  }
+
+  .ornament::before, .ornament::after {
+    content: '';
+    flex: 1;
+    max-width: 100px;
+    height: 1px;
+    background: var(--gold-soft);
+  }
+
+  .ornament svg { width: 28px; height: 28px; }
+
+  /* ===== CIERRE ===== */
+  .closing-section {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-deep) 100%);
+    padding: 100px 28px;
+    text-align: center;
+    margin-top: 80px;
+    border-top: 1px solid var(--gold-soft);
+  }
+
+  .closing-section h2 {
+    font-size: 3rem;
+    font-style: italic;
+    color: var(--gold-deep);
+    margin-bottom: 24px;
+  }
+
+  .closing-section p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: #1F1A0E !important;
+    max-width: 640px;
+    margin: 0 auto 20px;
+    line-height: 1.7;
+  }
+
+  .footer-signature {
+    margin-top: 56px;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    color: var(--gold);
+  }
+
+  .footer-mark {
+    margin-top: 24px;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* ===== MEDIA QUERIES ===== */
+  @media (max-width: 768px) {
+    .letter {
+      padding: 40px 28px;
+      margin: 48px auto;
+    }
+    .hero { padding: 60px 20px; }
+    section.chapter { padding: 60px 0 30px; }
+    .lead { font-size: 1.15rem; padding-left: 16px; }
+    .listing-mock { padding: 24px 20px; }
+    thead th, tbody td { padding: 10px 12px; font-size: 0.85rem; }
+    .kpi-value { font-size: 1.8rem; }
+  }
+
+  /* ===== NAV FLOTANTE (deshabilitado) ===== */
+  .top-nav { display: none; }
+</style>
+</head>
+<body>
+
+<div class="top-nav" id="topNav" style="display:none;"></div>
+
+<!-- ========= HERO ========= -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <div class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M12 21s-7-4.5-7-10a4 4 0 017-2.5A4 4 0 0119 11c0 5.5-7 10-7 10z" fill="#B8952E"/>
+        <path d="M9 11h6M12 8v6" stroke="#FBF7EE" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <span>Penthouse con Amor</span>
+    </div>
+    <h1>Negocios <span class="accent">con Amor</span><br>entre Edwin & Kelita</h1>
+    <p class="subtitle">Auditoría estratégica del listing — Camino al Mundial 2026</p>
+
+    <div class="hero-meta">
+      <div class="meta-item">
+        <div class="meta-label">Para</div>
+        <div class="meta-value">Edwin & Kelita linda</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Propiedad</div>
+        <div class="meta-value">PH Luz Saviñón 725</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Horizonte</div>
+        <div class="meta-value">Mayo – Julio 2026</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">↓ Empecemos por aquí</div>
+</section>
+
+<!-- ========= CARTA ========= -->
+<div class="wrap">
+  <div class="letter">
+    <h2>Querida Kelita,</h2>
+    <p class="salute">~ y para mí, mi compañero de vida ~</p>
+    <p>Lo que sigue es nuestro plan, escrito con la calma y el cariño con que tomamos cada decisión sobre la casa que el Señor nos ha permitido construir juntos. No es solo una auditoría de un listing de Airbnb — es la hoja de ruta para que <em>Penthouse con Amor</em> llegue al Mundial 2026 siendo lo que sabemos que es: un espacio donde se respira el amor de Dios.</p>
+    <p>Antes de cualquier estrategia, una verdad que ancla todo lo demás:</p>
+    <div class="verse">
+      <p class="verse-text">"El que no ama no ha conocido a Dios, porque Dios es amor."</p>
+      <p class="verse-ref">— 1 Juan 4:8</p>
+    </div>
+    <p>El nombre <em>con Amor</em> no es marketing. Es nuestra confesión. Cada huésped que cruza nuestra puerta —sea creyente o no, hable nuestro idioma o no— recibe el reflejo de ese Amor que primero recibimos. Por eso cada detalle importa, y por eso este plan no es solo de números.</p>
+    <p>Tenemos dos verdades sobre la mesa. La primera, dolorosa: el rating cayó a 3.5 estrellas y eso, en términos del algoritmo, nos hace invisibles. La segunda, hermosa: la CDMX es sede inaugural del Mundial. El partido México–Sudáfrica del 11 de junio abre todo. La oportunidad económica es real y es ahora.</p>
+    <p>Lo que tenemos enfrente son 30 días para convertir un problema en un cimiento. No vamos a apurar nada que no se haga con cuidado, pero tampoco vamos a perder esta ventana que Dios mismo puso delante. Te propongo aquí cada paso, con números, con tarifas, con palabras nuevas para el listing y con el tono que sabemos que distingue a nuestro proyecto.</p>
+    <p>Que cada decisión sea, como siempre, en paz, amor y armonía — y que el Señor prospere la obra de nuestras manos.</p>
+    <div class="signature">— Edwin</div>
+  </div>
+</div>
+
+<!-- ========= RESUMEN EJECUTIVO ========= -->
+<section class="chapter" id="resumen">
+  <div class="wrap">
+    <div class="chapter-num">Resumen ejecutivo</div>
+    <h2>Una <span class="gold">oportunidad de oro</span> y un problema urgente — al mismo tiempo.</h2>
+    <p class="lead">La CDMX hospeda 5 partidos del Mundial 2026 incluyendo la inauguración. La demanda en Airbnb subirá entre 155% y 184%. Pero a 3.5 estrellas, nuestro listing está sepultado en el buscador. Estos 30 días son la ventana entera.</p>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-value">180m²</div>
+        <div class="kpi-label">Dos pisos · 2 recámaras</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">5</div>
+        <div class="kpi-label">Partidos en CDMX</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">3.5★</div>
+        <div class="kpi-label">Rating actual — zona crítica</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">+184%</div>
+        <div class="kpi-label">ADR proyectado Mundial</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">El activo que tenemos</div>
+      <p>Penthouse de 180 m² en dos pisos, 2 recámaras completas, jacuzzi al aire libre, balcón, grass privado en azotea y cuarto bar. Esto no compite con Airbnbs típicos de Del Valle — compite directo con Polanco, Roma Norte y Condesa premium. El producto vale más de lo que estábamos cobrando.</p>
+    </div>
+
+    <h3><span class="num">→</span>La estrategia en 3 fases</h3>
+    <ol>
+      <li><strong>Mayo (0–30 días):</strong> rescate de rating con 1–3 reservas estratégicas a precio competitivo, respuesta pública a la reseña del agua, y overhaul completo de copy y fotos.</li>
+      <li><strong>19 mayo – 9 junio:</strong> rentar el penthouse completo durante nuestra estancia en España. Una sola reserva larga, idealmente un fan internacional llegando temprano al Mundial, que nos deje una reseña limpia antes del 11 de junio.</li>
+      <li><strong>11 junio – 19 julio:</strong> pivotar a habitación privada mientras estamos en casa. Anfitriones mexicanos como diferenciador en un mercado de Airbnbs anónimos.</li>
+    </ol>
+
+    <div class="callout urgent">
+      <div class="callout-label">⚠ Acción cero — esta semana</div>
+      <p>La más urgente y la más barata: responder hoy públicamente a la reseña del agua, y bajar la tarifa para conseguir 1–3 estancias semilla antes del 18 de mayo. Sobre eso se construye todo lo demás.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6L12 2z" fill="#B8952E"/></svg>
+</div>
+
+<!-- ========= 1. DIAGNÓSTICO ========= -->
+<section class="chapter" id="diagnostico">
+  <div class="wrap">
+    <div class="chapter-num">Capítulo 01 — Diagnóstico</div>
+    <h2>Las señales rojas <span class="gold">más probables</span></h2>
+    <p class="lead">Sin estatus de Superhost y con 3.5★, hay patrones que casi siempre se cumplen. Validemos cada uno contra la realidad del listing.</p>
+
+    <ul>
+      <li><strong>Título genérico</strong> que no usa los 50 caracteres ni incluye keywords premium como "Penthouse", "terraza", "Del Valle", "WTC" o "Mundial".</li>
+      <li><strong>Descripción</strong> sin estructura SEO ni gancho emocional en los primeros 400 caracteres (lo que se ve sin clic en "leer más").</li>
+      <li><strong>Fotos</strong>: probablemente menos de 25, sin hero shot a altura de pecho, iluminación mixta, sin captions con keywords.</li>
+      <li><strong>Amenidades</strong>: pocas marcadas en el panel — un listing con 35+ amenidades aparece en muchísimas más búsquedas filtradas.</li>
+      <li><strong>Política de cancelación estricta</strong> matando conversiones.</li>
+      <li><strong>Sin respuesta pública</strong> a la reseña del agua — perdiendo el activo más importante para neutralizarla.</li>
+    </ul>
+
+    <div class="checklist">
+      <h5>Mini-audit · esta semana</h5>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Título usa los 48–50 caracteres con 3 keywords</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">28–35 fotos en el listing</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Hero shot identificado como primera foto</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Caption en cada foto con keywords</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Mínimo 35 amenidades marcadas</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Instant Book activado con ID verificado</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Política de cancelación: Moderada</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Respuesta pública a reseña del agua publicada</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Calendario abierto 12 meses adelante</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Tiempo de respuesta &lt; 1 hora</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= 2. RESCATE DE RATING ========= -->
+<section class="chapter" id="rating">
+  <div class="wrap">
+    <div class="chapter-num">Capítulo 02 — Rescate</div>
+    <h2>De 3.5 a 4.5 estrellas <span class="gold">en 30 días</span></h2>
+    <p class="lead">Las matemáticas son brutales pero hay que entenderlas. Las reseñas más recientes pesan más, así que la dirección importa tanto como el número.</p>
+
+    <h3><span class="num">2.1</span>Las matemáticas del rescate</h3>
+    <p>Si tenemos hoy <strong>N reseñas con promedio 3.5</strong>, para llegar a:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Meta de rating</th><th>Reseñas perfectas necesarias</th><th>Realista antes del Mundial</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>4.5 ★</strong></td><td>2N (el doble del histórico)</td><td>✓ Posible</td></tr>
+          <tr><td><strong>4.7 ★</strong></td><td>4N</td><td>~ Difícil, no imposible</td></tr>
+          <tr><td><strong>4.8 ★</strong></td><td>6.5N</td><td>✗ No alcanza el tiempo</td></tr>
+          <tr><td><strong>4.9 ★ (Guest Favorite)</strong></td><td>14N</td><td>✗ Meta finales 2026</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span class="num">2.2</span>Responder a la reseña del agua — HOY</h3>
+    <p>Es la acción de mayor ROI que podemos tomar en los próximos 30 minutos. La respuesta pública es leída por todos los futuros huéspedes y es un activo permanente.</p>
+
+    <div class="listing-mock">
+      <h5>Plantilla — tono "con Amor"</h5>
+      <p>"Hola [nombre], gracias por compartir tu experiencia y, sobre todo, lamentamos profundamente el corte de agua que afectó tu estancia. Fue un evento del suministro municipal en la calle, completamente fuera de nuestro control, pero entendemos que eso no minimiza la incomodidad que viviste.</p>
+      <p>Aprendimos mucho de tu visita y, a partir de tu estancia, el penthouse cuenta con: (1) un sistema de almacenamiento de 1,100 L que garantiza agua continua aunque haya cortes en la red, (2) un protocolo de comunicación inmediata con el huésped ante cualquier eventualidad, y (3) un fondo de cortesía para cubrir cualquier imprevisto.</p>
+      <p>Gracias por darnos la oportunidad de mejorar. Cuando regreses a la CDMX nos encantaría recibirte y demostrarte la verdadera experiencia 'Penthouse con Amor'."</p>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Por qué funciona</div>
+      <p>Convierte la reseña de "este lugar tiene problemas" a "estos anfitriones son responsables, escucharon, invirtieron y cuidan". Los lectores futuros quedan tranquilos.</p>
+    </div>
+
+    <h3><span class="num">2.3</span>Estrategia de "huésped semilla"</h3>
+    <p>En las próximas 2–3 semanas, antes de irnos a España, conseguir <strong>1–3 estancias cortas (2–4 noches) a precio simbólico</strong> y experiencia 5 estrellas impecable.</p>
+    <ul>
+      <li>Bajar tarifa a <strong>MXN 900–1,100/noche</strong> durante 2–3 fines de semana del 15 al 31 de mayo.</li>
+      <li>Activar Instant Book con ID verificado y mínimo 3 reseñas previas del huésped.</li>
+      <li>Briefing impecable: welcome kit, contacto pre-llegada, mensaje de mid-stay, despedida con detalle, mensaje 24h post-checkout.</li>
+    </ul>
+
+    <div class="callout urgent">
+      <div class="callout-label">⚠ Importante — términos de Airbnb</div>
+      <p>NO podemos ofrecer descuento, regalo o beneficio condicionado a una reseña positiva. Lo que sí: excelencia operativa + mensaje natural sin condicionantes.</p>
+    </div>
+
+    <h3><span class="num">2.4</span>¿Pausar el listing? — No</h3>
+    <p>El algoritmo de 2025 castiga la inactividad. Los nuevos listings ya no reciben el "boost de novato", y los que pasan tiempo cerrados pierden recencia. <strong>Acelerar es la jugada.</strong></p>
+
+    <div class="personal-note">
+      <div class="nota-label">Nota para ti, Kelita ✶</div>
+      <p>Si ejecutamos esto bien, llegamos al 11 de junio con 4.3–4.5 estrellas y dos reseñas recientes contundentes. Suficiente para que el algoritmo nos reconozca durante el Mundial. Guest Favorite (4.9+) lo perseguimos después del torneo.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">
+  <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" fill="#B8952E"/><circle cx="4" cy="12" r="1.5" fill="#B8952E"/><circle cx="20" cy="12" r="1.5" fill="#B8952E"/></svg>
+</div>
+
+<!-- ========= 3. COPY ========= -->
+<section class="chapter" id="copy">
+  <div class="wrap">
+    <div class="chapter-num">Capítulo 03 — Copy</div>
+    <h2>Las palabras <span class="gold">que convierten</span></h2>
+    <p class="lead">El algoritmo de Airbnb 2025–2026 lee semánticamente la descripción y las reseñas. Los primeros 400 caracteres son críticos porque es lo que se ve sin clic en "leer más".</p>
+
+    <h3><span class="num">3.1</span>Reglas del título</h3>
+    <ul>
+      <li><strong>50 caracteres exactos.</strong> Cada byte cuenta.</li>
+      <li>Listings con "Penthouse" en el título promedian <strong>$55,918 USD anuales vs $25,415</strong> de los que dicen "apartment". Más del doble.</li>
+      <li>Estructura ganadora: <em>[Tipo único] + [Ubicación reconocida] + [Beneficio clave] + [Audiencia opcional]</em>.</li>
+      <li>Evitar: emojis, "5 estrellas", "lujo absoluto", "perfecto", números/SKUs, mayúsculas continuas.</li>
+    </ul>
+
+    <h4>Títulos sugeridos para A/B test</h4>
+    <p style="font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 8px;"><em>Entire place (mayo–9 junio):</em></p>
+    <div class="title-examples">
+      <div class="title-example">
+        <div class="text">Penthouse 180m² · Jacuzzi · Grass privado · Del Valle</div>
+        <div class="meta">53 — recortar a 50 · A</div>
+      </div>
+      <div class="title-example">
+        <div class="text">Penthouse 2 pisos · Jacuzzi y bar · Del Valle CDMX</div>
+        <div class="meta">49 caracteres · B</div>
+      </div>
+      <div class="title-example">
+        <div class="text">Penthouse premium Del Valle · Jacuzzi · WTC 10 min</div>
+        <div class="meta">49 caracteres · C</div>
+      </div>
+      <div class="title-example">
+        <div class="text">Penthouse Del Valle · 180m² · Jacuzzi · Mundial 2026</div>
+        <div class="meta">51 — recortar · D</div>
+      </div>
+    </div>
+
+    <p style="font-size: 0.95rem; color: var(--ink-soft); margin: 24px 0 8px;"><em>Habitación privada (junio–julio Mundial):</em></p>
+    <div class="title-examples">
+      <div class="title-example">
+        <div class="text">Hab. en Penthouse 180m² · Jacuzzi · Anfitriones locales</div>
+        <div class="meta">54 — recortar</div>
+      </div>
+      <div class="title-example">
+        <div class="text">Hab. privada Del Valle · Acceso jacuzzi · Mundial 2026</div>
+        <div class="meta">53 — recortar</div>
+      </div>
+    </div>
+
+    <h3><span class="num">3.2</span>Descripción completa — versión "Penthouse con Amor"</h3>
+
+    <div class="listing-mock">
+      <h5>Bienvenidos al Penthouse con Amor</h5>
+      <p>Penthouse de dos niveles, 180 m², la última planta de un edificio tranquilo en Del Valle Norte — una de las colonias mejor ubicadas y más seguras de la CDMX.</p>
+      <p>Edwin y Kelly construimos este espacio con una convicción simple: <em>Dios es Amor</em>, y cada huésped que cruza nuestra puerta merece sentirlo en los detalles. Por eso aquí encuentras luz natural en cada habitación, vista despejada de la ciudad, y los cuidados que hacen la diferencia entre un Airbnb y un hogar.</p>
+
+      <div class="item"><strong>El espacio (180 m² en dos pisos):</strong> 2 recámaras completas, jacuzzi al aire libre, balcón con vista, terraza-jardín con grass privado en la azotea, cuarto bar privado, cocina totalmente equipada, sala-comedor amplia, Wi-Fi de alta velocidad ideal para home-office.</div>
+
+      <div class="item"><strong>Las amenidades que nos distinguen:</strong> jacuzzi al aire libre para hasta 4 personas, grass natural privado en azotea (sí, jardín de verdad arriba), cuarto bar para hospedar amigos sin invadir el espacio principal, balcón con vista de CDMX, almacenamiento de agua 1,100 L (suministro continuo aunque haya cortes en la calle), Smart TV con Netflix, Disney+ y Prime Video, estación de café Nespresso, welcome kit "con Amor".</div>
+
+      <div class="item"><strong>Ubicación premium:</strong> Luz Saviñón 725, a 10 minutos en Uber del WTC, Polanco y Roma/Condesa; a 30 minutos del Estadio Ciudad de México (sede del Mundial 2026); a 5 cuadras de Metrobús y Metro División del Norte; seguridad 24/7 en el edificio.</div>
+
+      <div class="item"><strong>Para fans del Mundial 2026:</strong> a 30 minutos del Estadio Ciudad de México (5 partidos del torneo incluyendo la inauguración México-Sudáfrica). El cuarto bar y la terraza-jardín se convierten en tu propio Fan Fest privado. Te armamos guía de bares con pantallas grandes y horarios de partidos.</div>
+
+      <div class="item"><strong>El barrio:</strong> Del Valle Norte combina tranquilidad residencial con vida de barrio. Cafeterías, restaurantes, parques y supermercados a pie. Más auténtico que Roma/Condesa, igual de cómodo.</div>
+
+      <div class="item"><strong>Sobre nosotros:</strong> Edwin y Kelly. Vivimos aquí cuando no estamos viajando. Respondemos en menos de una hora. Te dejamos un manual con nuestras recomendaciones favoritas.</div>
+
+      <p class="closing">Penthouse con Amor — porque viajar bien empieza por sentirse en casa. Bienvenidos siempre.</p>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Por qué funciona esta descripción</div>
+      <p>Reformula el incidente del agua proactivamente (los 1,100 L), convierte la debilidad pasada en ventaja visible. Indexa keywords clave: Del Valle, WTC, Polanco, Roma, Mundial 2026, home office. Lleva la marca "con Amor" desde el primer párrafo.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2z" fill="#B8952E"/></svg>
+</div>
+
+<!-- ========= 4. FOTOGRAFÍA ========= -->
+<section class="chapter" id="fotos">
+  <div class="wrap">
+    <div class="chapter-num">Capítulo 04 — Fotografía</div>
+    <h2>Las primeras <span class="gold">cinco fotos</span> deciden todo</h2>
+    <p class="lead">Generan ~80% de la decisión de hacer clic. Listings con fotografía profesional generan +20–35% más ingresos y +24% más reservas.</p>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-value">28–35</div>
+        <div class="kpi-label">Fotos óptimas</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">1.2-1.4m</div>
+        <div class="kpi-label">Altura de cámara</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">3:2</div>
+        <div class="kpi-label">Aspecto horizontal</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">+30%</div>
+        <div class="kpi-label">Ingresos con fotos pro</div>
+      </div>
+    </div>
+
+    <h3><span class="num">4.1</span>Orden óptimo de las 30 fotos</h3>
+    <p style="margin-bottom: 8px;"><em>Las primeras 6 son la "portada visual" — cada una hero shot independiente:</em></p>
+    <ol>
+      <li><strong>Hero exterior/terraza</strong> con golden hour o vista de CDMX al atardecer.</li>
+      <li><strong>Sala principal</strong> — wide shot desde la esquina, mostrando flujo a comedor.</li>
+      <li><strong>Recámara principal</strong> — desde la puerta, cama tendida con triple capa de almohadas.</li>
+      <li><strong>Cocina</strong> — con luces encendidas, taza humeante o detalle que da vida.</li>
+      <li><strong>Terraza/balcón</strong> — preferentemente con setting de mesa servida, hora azul.</li>
+      <li><strong>Segunda recámara</strong> o gran ambiente.</li>
+    </ol>
+
+    <p style="margin-top: 24px;">Fotos 7–18: tour completo de habitaciones, baños, escritorio. Fotos 19–23: detalles de amenidades — Smart TV encendida, zona de café, welcome kit, sistema de almacenamiento de agua bien presentado (neutraliza visualmente la reseña del agua). Fotos 24–28: edificio y barrio. Foto 29: plano arquitectónico. <strong>Foto 30: Edwin y Kelly sonriendo en la terraza</strong> — activa la marca personal, crítica para fase habitación privada.</p>
+
+    <h3><span class="num">4.2</span>¿Vale la pena el fotógrafo pro?</h3>
+    <p>Sí, sin duda, dado el rating actual y la oportunidad del Mundial. Es la inversión de mejor ROI antes del torneo.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Opción</th><th>Costo MXN</th><th>Cuándo elegir</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Programa Airbnb (gratis)</strong></td><td>$0</td><td>Si está disponible — tómalo, cero riesgo</td></tr>
+          <tr><td><strong>Fotógrafo especializado STR</strong></td><td>3,500 – 8,000</td><td>Recomendado — sesión 1–2 hrs, 25–35 fotos editadas</td></tr>
+          <tr><td><strong>Premium con drone y video</strong></td><td>8,000 – 15,000</td><td>Solo si presupuesto lo permite</td></tr>
+          <tr><td><strong>Tour virtual Matterport</strong></td><td>+4,000 – 8,000</td><td>Opcional, no mueve la aguja en Airbnb</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Mi recomendación</div>
+      <p>Pagar <strong>MXN 5,000–7,000</strong> por sesión profesional de 30 fotos antes del 18 de mayo. ROI esperado: una sola reserva del Mundial paga 5–10 veces la inversión.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">
+  <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="14" rx="2" fill="none" stroke="#B8952E" stroke-width="1.5"/><circle cx="12" cy="13" r="3" fill="#B8952E"/></svg>
+</div>
+
+<!-- ========= 5. PRICING ========= -->
+<section class="chapter" id="pricing">
+  <div class="wrap">
+    <div class="chapter-num">Capítulo 05 — Pricing</div>
+    <h2>Las tarifas que <span class="gold">maximizan ingresos</span></h2>
+    <p class="lead">Recalibradas para lo que realmente tenemos: 180 m² en dos pisos con jacuzzi al aire libre, grass privado y cuarto bar. Esto compite con Polanco y Roma premium, no con Del Valle promedio.</p>
+
+    <div class="callout">
+      <div class="callout-label">Corrección de calibración</div>
+      <p>Las tarifas iniciales asumían un penthouse 2BR estándar de Del Valle (MXN 2,200–3,000/noche). Con jacuzzi al aire libre, terraza-jardín en azotea, cuarto bar y 180 m², el producto compite en un tier superior. Si MXN 2,090 ya nos parece barato — nuestro instinto es correcto.</p>
+    </div>
+
+    <h3><span class="num">5.1</span>Comparables reales del tier premium CDMX</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Zona / Tipo</th><th>ADR típico MXN/noche</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Del Valle estándar 1BR</td><td>1,200 – 1,900</td></tr>
+          <tr><td>Del Valle 2BR sin amenidades premium</td><td>2,200 – 3,000</td></tr>
+          <tr><td>Polanco / Roma / Condesa premium</td><td>2,800 – 4,500</td></tr>
+          <tr><td>Penthouses con jacuzzi/terraza CDMX (todas zonas)</td><td>3,500 – 6,500</td></tr>
+          <tr><td><strong>Nuestro penthouse 180 m² + jacuzzi + grass + bar</strong></td><td><strong>3,000 – 4,500 baseline</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span class="num">5.2</span>Periodo 1 — Entire place 19 mayo – 9 junio</h3>
+    <p>22 noches. Estrategia: bajar tarifa <em>a propósito</em> para conseguir UNA reserva larga de huésped 5★ que limpie nuestro rating antes del Mundial. <strong>Este es el único periodo donde subvencionamos precio.</strong></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Variable</th><th>Tarifa MXN/noche</th><th>Total 22 noches</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mercado real referencia</td><td>3,500 – 4,500</td><td>—</td></tr>
+          <tr><td>Tarifa lista pública (con descuento mensual visible)</td><td>3,200</td><td>70,400</td></tr>
+          <tr><td><strong>Con descuento mensual 25% (efectivo)</strong></td><td><strong>2,400 efectivo</strong></td><td><strong>52,800</strong></td></tr>
+          <tr><td>"Alma rota" si no hay reserva al 1 jun</td><td>2,090 efectivo</td><td>45,980</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Publicamos a <strong>MXN 3,200/noche lista</strong> con descuento por estancia larga 25% + 12% semanal. El huésped ve <strong>MXN 2,400 efectivo</strong>. <strong>Ya NO bajamos de 2,090</strong> — ese es el piso absoluto, justificable solo en este periodo de rescate. Early-bird adicional del 10% para reservas antes del 18 de mayo.</p>
+    <p><strong>Política:</strong> Moderada. <strong>Mínimo:</strong> 5–7 noches.</p>
+
+    <h3><span class="num">5.3</span>Periodo 2 — Mundial (11 jun – 19 jul)</h3>
+    <p>CDMX tiene 5 partidos en estadio (11, 17, 24 jun; 30 jun; 5 jul) más actividad continua. Demanda fuerte toda la ventana. Aquí <strong>recuperamos todo lo que regalamos en mayo y más</strong>.</p>
+
+    <h4>Opción A — Entire place durante Mundial (recomendada si pueden mudarse)</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Tipo de noche</th><th>Tarifa MXN/noche</th><th>Lógica</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Noche estándar Mundial</td><td><strong>5,500 – 7,500</strong></td><td>2× baseline tier premium</td></tr>
+          <tr><td><strong>Día de partido CDMX (5 fechas)</strong></td><td><strong>9,500 – 14,000</strong></td><td>3–4× compresión real</td></tr>
+          <tr><td>Partido otra sede, alojamiento CDMX</td><td>6,500 – 8,500</td><td>Premium intermedio</td></tr>
+          <tr><td>Final del torneo (jul 16–19)</td><td>7,000 – 9,000</td><td>Fans antes de salir</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>Opción B — Habitación privada con anfitriones (si se quedan en casa)</h4>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Tipo de noche</th><th>Tarifa MXN/noche</th><th>Lógica</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Noche estándar Mundial</td><td><strong>3,200 – 4,500</strong></td><td>50–60% del entire place</td></tr>
+          <tr><td>Día de partido CDMX</td><td><strong>5,500 – 7,000</strong></td><td>Premium incluye acceso jacuzzi/bar</td></tr>
+          <tr><td>Final del torneo</td><td>3,800 – 4,800</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Mínimo:</strong> 4 noches en partidos CDMX, 3 noches resto. <strong>Política cancelación durante Mundial:</strong> Firme (40% reembolsable hasta 30 días antes). Justificado por compresión.</p>
+
+    <div class="callout urgent">
+      <div class="callout-label">⚠ NO usar Smart Pricing de Airbnb</div>
+      <p>Está consistentemente por debajo del mercado en eventos. Usar <strong>PriceLabs (~$20 USD/mes)</strong> con módulo "Event Pricing" que ya incluye Mundial 2026. Override manual los días de partido con los pisos de arriba.</p>
+    </div>
+
+    <h3><span class="num">5.4</span>Periodo 3 — Post-Mundial (después del 19 jul)</h3>
+    <p>Volver a tarifa baseline real: <strong>MXN 3,000 – 4,500/noche entire place</strong>. NO regresar a 2,090 — ese precio fue solo herramienta de rescate de rating.</p>
+  </div>
+</section>
+
+<div class="ornament">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 22h20L12 2z" fill="none" stroke="#B8952E" stroke-width="1.5"/><circle cx="12" cy="16" r="2" fill="#B8952E"/></svg>
+</div>
+
+<!-- ========= 6. AMENIDADES ========= -->
+<section class="chapter" id="amenidades">
+  <div class="wrap">
+    <div class="chapter-num">Capítulo 06 — Amenidades</div>
+    <h2>Mejoras priorizadas por <span class="gold">costo / beneficio</span></h2>
+    <p class="lead">La marca "con Amor" solo funciona si es tangible. Cada peso invertido debe traducirse en una keyword positiva en futuras reseñas.</p>
+
+    <h3><span class="num">6.1</span>Para huéspedes del Mundial</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Inversión</th><th>Costo MXN</th><th>Impacto</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Smart TV 55"+ con apps streaming</td><td>8,000 – 15,000</td><td><strong>ALTO</strong> — fans quieren ver partidos</td></tr>
+          <tr><td>Internet 200 Mbps simétrico</td><td>+600/mes vs estándar</td><td><strong>ALTO</strong> — keyword fuerte</td></tr>
+          <tr><td>Decoración futbolera sutil</td><td>800 – 1,500</td><td>MEDIO — instagrameable</td></tr>
+          <tr><td>Guía Fan Fests / bares / estadio</td><td>200 impresión</td><td><strong>ALTO</strong> — diferenciación "con Amor"</td></tr>
+          <tr><td>Bandera México + país visitante (rotada)</td><td>300</td><td>MEDIO — detalle "wow"</td></tr>
+          <tr><td>Welcome kit (Victoria, cacahuates, Abuelita)</td><td>250 por huésped</td><td><strong>ALTO</strong> — recurrencia en reseñas</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span class="num">6.2</span>Mejoras que neutralizan el incidente del agua</h3>
+    <p><strong>Crítico</strong>: el almacenamiento de agua debe ser visible y mencionable.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Acción</th><th>Costo MXN</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Tinaco/cisterna 1,100 L con bomba</td><td>8,000 – 14,000</td></tr>
+          <tr><td>Calentador de paso (no de tinaco)</td><td>6,000 – 10,000</td></tr>
+          <tr><td>Dispensador de garrafones para tomar</td><td>1,500 inicial</td></tr>
+          <tr><td>Cartel discreto: "Sistema de respaldo 24/7"</td><td>200</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span class="num">6.3</span>Hospitalidad "con Amor" — detalles de marca</h3>
+    <ul>
+      <li><strong>Mensaje pre-llegada</strong> con audio o foto de Edwin y Kelly saludando.</li>
+      <li><strong>Cesta de bienvenida</strong>: pan dulce local, fruta, café, chocolate, agua, nota escrita a mano "Bienvenidos al Penthouse con Amor — Edwin y Kelly".</li>
+      <li><strong>Manual digital + físico</strong>: PDF y libreta con recomendaciones de restaurantes, bares de fútbol, taxistas confiables, farmacias 24h.</li>
+      <li><strong>Personalización</strong>: aniversario / cumpleaños → tarjeta + flor. Extranjero → snack típico mexicano.</li>
+      <li><strong>Despedida</strong>: tarjeta + souvenir mínimo (separador con bandera + frase).</li>
+    </ul>
+
+    <p>Costo total welcome kit + despedida: <strong>~MXN 350 por estancia</strong>. ROI: invaluable.</p>
+  </div>
+</section>
+
+<div class="ornament">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.5A4 4 0 0119 11c0 5.5-7 10-7 10z" fill="#B8952E"/></svg>
+</div>
+
+<!-- ========= 7. CONTINGENCIA ========= -->
+<section class="chapter" id="contingencia">
+  <div class="wrap">
+    <div class="chapter-num">Capítulo 07 — Contingencia</div>
+    <h2>Para que <span class="gold">no vuelva a pasar</span></h2>
+    <p class="lead">Lo que hizo daño no fue el corte de agua. Fue la falta de comunicación y respuesta. Esta vez tenemos protocolo.</p>
+
+    <h3><span class="num">7.1</span>Protocolo de incidentes</h3>
+    <ol>
+      <li><strong>Detección anticipada:</strong> monitorear WhatsApp del edificio y avisos SACMEX (cortes programados se anuncian con 24–48 hrs).</li>
+      <li><strong>Aviso proactivo:</strong> mensaje 12 hrs antes — <em>"Hola, queremos avisarte que la calle tendrá mantenimiento de agua entre 9 y 13 hrs. Tu departamento tiene tinaco de respaldo de 1,100 L, tendrás agua continua. Si notas algo, escríbenos."</em></li>
+      <li><strong>Plan B inmediato:</strong> lista de hoteles boutique aliados a 5 min (Krystal, Galería Plaza, NH Reforma) — canje de noche con cortesía + reembolso + cesta de disculpa. Convierte desastre en reseña 5★.</li>
+      <li><strong>Backup eléctrico:</strong> UPS para modem de internet (~MXN 1,500) garantiza Wi-Fi en parpadeos.</li>
+    </ol>
+
+    <h3><span class="num">7.2</span>Checklist de turnover</h3>
+    <div class="checklist">
+      <h5>Casa siempre lista</h5>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Llave de paso de agua probada antes de cada check-in</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Tinaco verificado al 70%+ lleno</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Internet probado con speed test + screenshot al huésped</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Smart TV con Netflix / Disney+ / Prime activas</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Detector de humo y CO con baterías frescas</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Botiquín visible</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Segunda llave disponible (por si huésped pierde)</div></div>
+    </div>
+
+    <h3><span class="num">7.3</span>Soporte humano durante España (19 mayo – 9 junio)</h3>
+    <p>Necesitamos cohost o persona de confianza local disponible 24/7. Opciones:</p>
+    <ul>
+      <li><strong>Cohost Airbnb</strong> (función nativa, 10–20% de ingresos): la más profesional.</li>
+      <li><strong>Naya Homes / Casai / property manager local</strong>: 18–25% pero asumen todo, incluido limpieza.</li>
+      <li><strong>Familiar o amigo con bono fijo</strong>: MXN 1,500 por turno — más barato, mayor riesgo operativo.</li>
+    </ul>
+    <p>Para Mundial ya estaremos nosotros en CDMX viviendo en el penthouse, así que esta capa es solo para la ventana de España.</p>
+  </div>
+</section>
+
+<div class="ornament">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20" stroke="#B8952E" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="#B8952E" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ========= 8. HABITACIÓN PRIVADA ========= -->
+<section class="chapter" id="habitacion">
+  <div class="wrap">
+    <div class="chapter-num">Capítulo 08 — Habitación Privada</div>
+    <h2>El nicho que <span class="gold">no existe</span> en el inventario Mundial</h2>
+    <p class="lead">Casi todos los listings durante el Mundial serán entire places anónimos. Nosotros vamos a ofrecer algo distinto: la experiencia de quedarse con una familia mexicana en su penthouse.</p>
+
+    <h3><span class="num">8.1</span>¿Listing nuevo o el mismo?</h3>
+    <p><strong>Recomendación:</strong> crear un listing separado para habitación privada y pausar el calendario del entire place durante 11 jun – 19 jul. Razones:</p>
+    <ol>
+      <li>El tipo de propiedad (entire place vs private room) afecta filtros y SEO. Cambiarlo borra señales de calidad.</li>
+      <li>Las reseñas no se transfieren entre listings.</li>
+      <li><strong>Estrategia híbrida ideal:</strong> mantener listing original como entire place (donde se acumulan reseñas del rescate y mayo–junio), y crear segundo listing como habitación privada <em>vinculado al mismo perfil de host</em>. El perfil concentra reseñas en ambos.</li>
+    </ol>
+
+    <h3><span class="num">8.2</span>El gancho de la descripción</h3>
+    <div class="listing-mock">
+      <h5>Vive el Mundial 2026 como local</h5>
+      <p>Te alojas en una habitación privada de nuestro penthouse en Del Valle Norte, con Edwin y Kelly como tus anfitriones mexicanos.</p>
+      <p>Te llevamos al Estadio Ciudad de México, te recomendamos los mejores bares para ver los partidos, y te invitamos a desayunar con nosotros si quieres conocer la verdadera CDMX.</p>
+      <p>Habitación privada con baño / acceso a baño, acceso a terraza, cocina y sala.</p>
+      <p class="closing">Si buscas hotel, mejor ve a Polanco. Si buscas la experiencia que recordarás toda la vida, este es tu lugar.</p>
+    </div>
+
+    <h3><span class="num">8.3</span>Pricing diferencial habitación</h3>
+    <p>Habitación privada normalmente lista a 30–40% del entire place. Durante Mundial, con anfitriones locales como diferenciador, podemos cobrar 50–60%.</p>
+    <ul>
+      <li>Entire place comparable Mundial: MXN 4,500 – 5,500/noche</li>
+      <li><strong>Habitación privada normal Mundial: MXN 2,300 – 2,800/noche</strong></li>
+      <li><strong>Habitación privada día de partido CDMX: MXN 3,200 – 3,800/noche</strong></li>
+    </ul>
+
+    <h3><span class="num">8.4</span>Logística de convivencia</h3>
+    <ul>
+      <li><strong>Espacios privados claramente definidos</strong>: recámara del huésped + baño son intocables.</li>
+      <li><strong>Reglas de la casa por escrito</strong>: silencio después de 23h, áreas comunes compartidas.</li>
+      <li><strong>Cero acceso a nuestra recámara</strong> o áreas privadas — candado o cerradura.</li>
+      <li><strong>Fan zone temática en la sala</strong>: TV grande con partidos, asientos cómodos, acceso para ver cualquier partido en grupo. Convierte la sala en experiencia compartida, no en punto de fricción.</li>
+      <li><strong>Desayuno opcional</strong>: "desayuno mexicano con nosotros" como add-on de MXN 250/persona. Quien quiera la experiencia paga; quien no, respeta su espacio.</li>
+    </ul>
+
+    <div class="personal-note">
+      <div class="nota-label">Reflexión ✶</div>
+      <p>Las habitaciones privadas con anfitrión presente a menudo reciben reseñas MÁS ALTAS que entire places en mercados turísticos. El huésped que las elige ya está abierto a la experiencia local, y el anfitrión presente filtra problemas en tiempo real. Nuestra fortaleza emocional es nuestra ventaja competitiva.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6L12 2z" fill="#B8952E"/></svg>
+</div>
+
+<!-- ========= 9. PLAN 30 DÍAS ========= -->
+<section class="chapter" id="plan">
+  <div class="wrap">
+    <div class="chapter-num">Capítulo 09 — Plan accionable</div>
+    <h2>Checklist de los <span class="gold">próximos 30 días</span></h2>
+    <p class="lead">Semana por semana, hasta el 11 de junio. Si seguimos esto, llegamos al Mundial con todo listo.</p>
+
+    <div class="checklist">
+      <h5>Esta semana (10–17 mayo)</h5>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Responder públicamente a la reseña del incidente del agua</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Auditar listing actual contra checklist del Capítulo 01</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Contratar fotógrafo profesional para antes del 18 mayo (MXN 5–7k)</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Instalar sistema de almacenamiento de agua si falta</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Reescribir título y descripción con plantillas Cap. 03</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Activar Instant Book con verified ID required</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Cambiar política de cancelación a Moderada</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Bajar tarifa 15–31 mayo a MXN 900–1,100 para estancias semilla</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Preparar welcome kit "con Amor" estandarizado</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Suscribirse a PriceLabs</div></div>
+    </div>
+
+    <div class="checklist">
+      <h5>Semana 2 (17–24 mayo)</h5>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Subir 30 fotos profesionales en orden óptimo con captions</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Marcar mínimo 35 amenidades en el panel</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Configurar tarifas Mundial en PriceLabs + override días de partido</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Contratar cohost para periodo España (19 mayo – 9 junio)</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Crear listing nuevo de habitación privada con calendario desde 11 jun</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Confirmar Wi-Fi 200 Mbps simétrico</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Verificar Smart TV con apps de streaming</div></div>
+    </div>
+
+    <div class="checklist">
+      <h5>Semana 3 (24–31 mayo)</h5>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Recibir y operar primera estancia semilla con excelencia</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Ajustar copy según feedback del primer huésped</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Diseñar manual digital de la casa (PDF + impreso)</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Ensayar protocolo de incidentes con cohost</div></div>
+    </div>
+
+    <div class="checklist">
+      <h5>Semana 4 (1–9 junio)</h5>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Huésped de mayo-junio con experiencia 5 estrellas garantizada</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Pedir reseña de forma natural al despedirse</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Activar tarifas Mundial en listing habitación privada</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Comprar decoración futbolera + banderas + welcome kit Mundial</div></div>
+    </div>
+
+    <div class="checklist">
+      <h5>Desde el 11 de junio · Modo Mundial</h5>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Vivir en el penthouse y operar habitación privada</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Welcome kit Mundial cada huésped + guía Fan Fests</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Mensajes diarios de mid-stay</div></div>
+      <div class="checklist-item"><div class="checkbox"></div><div class="text">Detectar fans VIP de fase grupos para ofrecer descuentos por estancia larga</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M3 12c2-6 16-6 18 0M3 12c2 6 16 6 18 0" stroke="#B8952E" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" fill="#B8952E"/></svg>
+</div>
+
+<!-- ========= 10. PROYECCIÓN ========= -->
+<section class="chapter" id="proyeccion">
+  <div class="wrap">
+    <div class="chapter-num">Capítulo 10 — Proyección</div>
+    <h2>Lo que nos puede dejar <span class="gold">esta ventana</span></h2>
+    <p class="lead">Recalibrada con las tarifas reales del tier premium. Asumiendo ejecución del plan completo, conservadoramente.</p>
+
+    <h3><span class="num">10.1</span>Escenario base — Entire place todo el periodo</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Periodo</th><th>Noches</th><th>ADR efectivo MXN</th><th>Ocupación</th><th>Bruto MXN</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>19 mayo – 9 jun (rescate)</td><td>22</td><td>2,400</td><td>95%</td><td>~50,000</td></tr>
+          <tr><td>11 jun – 19 jul Mundial · noches estándar</td><td>25</td><td>6,000</td><td>80%</td><td>~120,000</td></tr>
+          <tr><td><strong>11 jun – 19 jul · 5 días partido CDMX</strong></td><td><strong>5</strong></td><td><strong>11,000</strong></td><td><strong>100%</strong></td><td><strong>~55,000</strong></td></tr>
+          <tr><td>11 jun – 19 jul · días partido otras sedes</td><td>9</td><td>7,500</td><td>85%</td><td>~57,000</td></tr>
+          <tr><td colspan="4"><strong>Total ventana 19 mayo – 19 julio (bruto)</strong></td><td><strong>~282,000</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3><span class="num">10.2</span>Escenario optimista — Pricing más agresivo</h3>
+    <p>Si llenan los 5 días de partido CDMX a MXN 13,000 + noches estándar a MXN 7,000 + el resto al rango alto, <strong>el bruto puede llegar a MXN 340,000 – 380,000</strong>.</p>
+
+    <h3><span class="num">10.3</span>Neto estimado</h3>
+    <p>Restando comisión Airbnb (~15%), cohost periodo España (15–20%), limpieza (~MXN 1,500 por turnover × 8–12 estancias), amenities y fotografía profesional:</p>
+    <ul>
+      <li><strong>Escenario base:</strong> neto MXN <strong>180,000 – 210,000</strong> en 60 días</li>
+      <li><strong>Escenario optimista:</strong> neto MXN <strong>240,000 – 290,000</strong> en 60 días</li>
+    </ul>
+
+    <div class="callout">
+      <div class="callout-label">El verdadero ROI</div>
+      <p>No es solo el dinero de 60 días. Es <strong>terminar julio 2026 con 8–12 reseñas nuevas, rating arriba de 4.5, marca "con Amor" consolidada, y el penthouse posicionado para competir todo el resto de 2026</strong> en el tier premium real (MXN 3,000–4,500 entire place baseline). Ese es el activo de largo plazo que compramos con esta operación.</p>
+    </div>
+
+    <h3><span class="num">10.4</span>Lección de pricing aprendida</h3>
+    <div class="personal-note">
+      <div class="nota-label">Importante ✶</div>
+      <p>Nuestro instinto era correcto: <strong>MXN 2,090 era barato</strong>. Lo bajamos como herramienta de rescate de rating, pero ese NO es el valor real del penthouse. Después del 19 de julio, el piso baseline debe quedar en MXN 3,000–3,500 mínimo. Subvencionamos precio solo cuando sirve a un objetivo más grande — recuperar rating, captar a una sola reserva crítica. Lo demás es respetar lo que vale lo que el Señor nos dio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========= CIERRE ========= -->
+<section class="closing-section">
+  <h2>En paz, amor y armonía.</h2>
+  <p>El reloj está corriendo. La acción más importante de toda esta auditoría es también la más barata: responder hoy a la reseña del agua, y bajar la tarifa para conseguir 1–3 estancias semilla antes del 18 de mayo.</p>
+  <p>Sobre eso se construye todo lo demás.</p>
+  <div class="footer-signature">— Edwin & Kelita ❤</div>
+  <div class="footer-mark">Penthouse con Amor · Negocios con Amor · Mundial 2026</div>
+</section>
+
+<script>
+  // Nav flotante al scrollear
+  const nav = document.getElementById('topNav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 800) nav.classList.add('visible');
+    else nav.classList.remove('visible');
+  });
+
+  // Checkboxes interactivos
+  document.querySelectorAll('.checkbox').forEach(box => {
+    box.addEventListener('click', () => {
+      box.classList.toggle('checked');
+    });
+  });
+
+  // Fade-in al scrollear
+  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.chapter, .letter, .closing-section').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
